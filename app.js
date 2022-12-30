@@ -21,13 +21,14 @@ canvas.height=800;
 // fillRect(x축,y축,너비,높이) : 채워진 사각형을 그리는 함수
 // strokeRect(x축,y축,너비,높이) : 비워진 사각형을 그리는 함수
 
-//집 그리기 연습
-ctx.fillRect(200, 200, 50, 200);
-ctx.fillRect(400, 200, 50, 200);
-ctx.lineWidth = 2;
-ctx.fillRect(300, 300, 50, 100);
-ctx.fillRect(200, 200, 200, 20);
-ctx.moveTo(200,200);
-ctx.lineTo(325,100);
-ctx.lineTo(450,200);
+// arc(x축, y축, 크기(radius), 시작점, 끝점)
+// 끝점 : 원을 만들기 위해서 = 2*Math.PI
+// w3schools.com/tags/canvas_arc.asp
+
+ctx.arc(250, 100, 50, 0 , 2*Math.PI);
+ctx.fill();
+ctx.beginPath();
+ctx.fillStyle="white";
+ctx.arc(230, 80, 5, Math.PI , 2 *Math.PI);
+ctx.arc(270, 80, 5, Math.PI , 2 *Math.PI);
 ctx.fill();
